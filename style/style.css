@@ -20,66 +20,91 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
 }
 
 .container {
-  /* border: 10px red solid ; */
   max-width: 75vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
+
+
+/* CONTAINER HEAD */
+
+
 .container-head {
-  /* border: 5px rgb(149, 244, 7) solid; */
   text-align: center;
   display: block;
-  width: 40%;
+  width: 50%;
 }
 .container-head h1 {
   color: var(--Very-Dark-Blue);
   line-height: 1.3rem;
 }
-.container-head h1:first-of-type {
-  font-weight: 200;
+.container-head h1, .container-head h2{
+   font-size: 1.7em;
+  color:var(--Very-Dark-Blue)
 }
+.container-head h1{
+  font-weight: 200;
+  margin-bottom: -12px;
+}
+
 .container-head p {
   color: var(--Grayish-Blue);
   font-size: 0.85rem;
+  margin-top: -10px;
+  margin-bottom: 40px;
 }
+
+
+
+/* CONTAINTER CONTENT */
+
+
 .container-content {
   margin: 0 auto;
   width: 100%;
-  /* border: 3px solid rgb(40, 255, 244); */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 20px;
+  gap: 25px;
   grid-template-areas:
     "supervisor team-builder calculator"
     "supervisor karma calculator";
 }
+
+
+/* CONTAINER ITEMS */
+
+
 .content-card {
   border-radius: 4px;
   width: 250px;
-  padding: 0px;
+  height: 190px;
   box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.297);
   overflow: hidden;
-  padding: 20px;
+  padding: 0px 25px 25px 25px;
 }
 .content-card h4 {
   color: var(--Very-Dark-Blue);
+  margin-bottom: -1.5px;
 }
 .content-card p {
   color: var(--Grayish-Blue);
   font-size: 0.7rem;
+  margin-bottom: 35px;
+  line-height: 20px;
 }
 .content-card img{
-
 float: right;
 }
+
 .supervisor {
   border-top: 4px solid var(--Cyan);
   grid-area: supervisor;
@@ -87,17 +112,14 @@ float: right;
 }
 .team-builder {
   border-top: 4px solid var(--Red);
-
   grid-area: team-builder;
 }
 .karma {
   border-top: 4px solid var(--Orange);
-
   grid-area: karma;
 }
 .calculator {
   border-top: 4px solid var(--Blue);
-
   grid-area: calculator;
   align-self: center;
 }
