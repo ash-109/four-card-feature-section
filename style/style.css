@@ -25,7 +25,7 @@ body {
 }
 
 .container {
-  max-width: 75vw;
+  width: 75vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,7 +57,7 @@ body {
 
 .container-head p {
   color: var(--Grayish-Blue);
-  font-size: 0.85rem;
+  font-size: 1rem;
   margin-top: -10px;
   margin-bottom: 40px;
 }
@@ -97,7 +97,7 @@ body {
 }
 .content-card p {
   color: var(--Grayish-Blue);
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   margin-bottom: 35px;
   line-height: 20px;
 }
@@ -136,6 +136,22 @@ float: right;
 
 /* Responsive */
 @media screen and (max-width:768px){
+  .container{
+    width: 100%;
+    margin: 50px;
+  }
+.container-head{
+  width: 85%;
+}
+.container-head h1, .container-head h2{
+  font-size: 1.5em;
+ color:var(--Very-Dark-Blue)
+}
+.container-head p {
+font-size: 0.95rem;
+
+}
+
   .container-content{
     display: flex;
     flex-direction: column;
