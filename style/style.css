@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+body {
+  font-family: "Poppins";
+  background-color: var(--Very-Light-Gray);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+.container {
+  /* border: 10px red solid ; */
+  max-width: 75vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container-head {
+  /* border: 5px rgb(149, 244, 7) solid; */
+  text-align: center;
+  display: block;
+  width: 40%;
+}
+.container-head h1 {
+  color: var(--Very-Dark-Blue);
+  line-height: 1.3rem;
+}
+.container-head h1:first-of-type {
+  font-weight: 200;
+}
+.container-head p {
+  color: var(--Grayish-Blue);
+  font-size: 0.85rem;
+}
+.container-content {
+  margin: 0 auto;
+  width: 100%;
+  /* border: 3px solid rgb(40, 255, 244); */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  grid-template-areas:
+    "supervisor team-builder calculator"
+    "supervisor karma calculator";
+}
+.content-card {
+  border-radius: 4px;
+  width: 250px;
+  padding: 0px;
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.297);
+  overflow: hidden;
+  padding: 20px;
+}
+.content-card h4 {
+  color: var(--Very-Dark-Blue);
+}
+.content-card p {
+  color: var(--Grayish-Blue);
+  font-size: 0.7rem;
+}
+.content-card img{
+
+float: right;
+}
+.supervisor {
+  border-top: 4px solid var(--Cyan);
+  grid-area: supervisor;
+  align-self: center;
+}
+.team-builder {
+  border-top: 4px solid var(--Red);
+
+  grid-area: team-builder;
+}
+.karma {
+  border-top: 4px solid var(--Orange);
+
+  grid-area: karma;
+}
+.calculator {
+  border-top: 4px solid var(--Blue);
+
+  grid-area: calculator;
+  align-self: center;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+
+
+/* Responsive */
+@media screen and (max-width:768px){
+  .container-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+width: 100%;  }
+}
