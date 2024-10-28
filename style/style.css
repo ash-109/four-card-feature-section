@@ -25,17 +25,13 @@ body {
 }
 
 .container {
-  width: 75vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-
-
 /* CONTAINER HEAD */
-
 
 .container-head {
   text-align: center;
@@ -46,26 +42,24 @@ body {
   color: var(--Very-Dark-Blue);
   line-height: 1.3rem;
 }
-.container-head h1, .container-head h2{
-   font-size: 1.7em;
-  color:var(--Very-Dark-Blue)
+.container-head h1,
+.container-head h2 {
+  font-size: 1.7em;
+  color: var(--Very-Dark-Blue);
 }
-.container-head h1{
+.container-head h1 {
   font-weight: 200;
   margin-bottom: -12px;
 }
 
 .container-head p {
   color: var(--Grayish-Blue);
-  font-size: 1rem;
+  font-size: 0.85rem;
   margin-top: -10px;
   margin-bottom: 40px;
 }
 
-
-
 /* CONTAINTER CONTENT */
-
 
 .container-content {
   margin: 0 auto;
@@ -79,9 +73,7 @@ body {
     "supervisor karma calculator";
 }
 
-
 /* CONTAINER ITEMS */
-
 
 .content-card {
   border-radius: 4px;
@@ -101,8 +93,8 @@ body {
   margin-bottom: 35px;
   line-height: 20px;
 }
-.content-card img{
-float: right;
+.content-card img {
+  float: right;
 }
 
 .supervisor {
@@ -133,29 +125,30 @@ float: right;
   text-decoration: none;
 }
 
-
 /* Responsive */
-@media screen and (max-width:768px){
-  .container{
+@media screen and (max-width: 950px) {
+  .container {
     width: 100%;
     margin: 50px;
   }
-.container-head{
-  width: 85%;
-}
-.container-head h1, .container-head h2{
-  font-size: 1.5em;
- color:var(--Very-Dark-Blue)
-}
-.container-head p {
-font-size: 0.95rem;
+  .container-head {
+    width: 85%;
+  }
+  .container-head h1,
+  .container-head h2 {
+    font-size: 1.5em;
+    color: var(--Very-Dark-Blue);
+  }
+  .container-head p {
+    font-size: 0.95rem;
+  }
 
-}
-
-  .container-content{
+  .container-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-width: 100%;  }
+    flex-wrap: wrap;
+    width: 100%;
+  }
 }
